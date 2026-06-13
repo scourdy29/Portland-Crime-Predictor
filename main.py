@@ -13,11 +13,10 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000",
-                   "https://portland-crime-predictor-k1joh80mn-sebastianjc.vercel.app"],
+    allow_origins=["*"],
     allow_methods=["*"],
     allow_headers=["*"],
-    )
+)
 
 loaded_model = joblib.load("portland_crime_rf_model.pkl")
 loaded_encoder = joblib.load("neighborhood_label_encoder.pkl")
