@@ -38,7 +38,7 @@ function App() {
           <input type="number" value={month} min="1" max="12" onChange={(e) => setMonth(e.target.value)} />
         </label>
         <button onClick={() => {
-          fetch("http://127.0.0.1:8000/predict", {
+          fetch("https://portland-crime-predictor.onrender.com/predict", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
